@@ -1,0 +1,10 @@
+<html>
+	<body>
+		<p>Hi HR Team</p>
+		The Mid Term review form for #probationerName  is submitted.
+		<br>Please click on the below url and use your windows/Ldap credentials to log in.
+		<br><a href=#probationAppraisalLink>#probationAppraisalLink</a>
+		<br>This is an auto generated email. Do not reply.
+	</body>
+
+<html>

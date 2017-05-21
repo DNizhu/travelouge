@@ -1,0 +1,11 @@
+<html>
+	<body>
+		<p>Hi #SLRName</p>
+
+		<p>#managerName has submitted an appraisal for Second Level review.</p>
+		<p>Kindly visit on link - <a href="#appraisalLink">#appraisalLink/</a> and complete the Second Level review.</p>
+		<p>Thanks</p>
+		<p>HR Dept.</p>
+		<p>Note: This is an auto-generated mail, please do not reply. For any concerns, contact <a href="mailto:#appraisalMail">#appraisalMail</a></p>
+	</body>
+</html>	

@@ -1,0 +1,5 @@
+projectKey=AppraisalSystem123
+serverUrl=http://localhost:9000
+dashboardUrl=http://localhost:9000/dashboard/index/AppraisalSystem123
+ceTaskId=AVocDVhq9dNFn4N_g5aP
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AVocDVhq9dNFn4N_g5aP

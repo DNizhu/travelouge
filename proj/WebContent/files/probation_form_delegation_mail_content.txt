@@ -1,0 +1,9 @@
+<html>
+	<body>
+		<p>Dear #delegatedTo</p>
+		The Probation Evaluation review form of #probationerName for the month-#month is delgated to you by #delegatedBy
+		<br>Please click on the below url and use your windows/Ldap credentials to log in.
+		<br><a href=#probationAppraisalLink>#probationAppraisalLink</a>
+		<br>This is an auto generated email. Do not reply.
+	</body>
+</html>

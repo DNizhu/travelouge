@@ -1,0 +1,11 @@
+<html>
+	<body>
+		<p>Dear #toName</p>
+		 You are required to complete and submit the Probation #form form for #probationerName
+		<br>Please click on the below url and use your windows/Ldap credentials to log in.
+		<br><a href=#probationAppraisalLink>#probationAppraisalLink</a>
+		<br>In case you have you have any queries, please reach out to HR Team.
+		<br>This is auto-generated email. Do not reply.
+		<br>HR Team
+	</body>
+</html>

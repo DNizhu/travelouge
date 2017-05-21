@@ -1,0 +1,10 @@
+<html>
+	<body>
+		<p>Dear #groupHead</p>
+		Please review and submit the Probation Evaluation review form for #probationerName.
+		<br>Please click on the below url and use your windows/Ldap credentials to log in.
+		<br><a href=#probationAppraisalLink>#probationAppraisalLink</a>
+		<br>This is an auto generated email. Do not reply.
+	</body>
+
+<html>

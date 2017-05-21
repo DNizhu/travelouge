@@ -1,0 +1,11 @@
+<html>
+	<body>
+		<p>Hi #managerName</p>
+
+		<p>#empName (emp code: #empId) has submitted self appraisal form. </p>
+		<p>Kindly visit on link - <a href=#appraisalLink>#appraisalLink</a> and fill manager review.</p>
+		<p>Thanks</p>
+		<p>HR Dept.</p>
+		<p>Note: This is an auto-generated mail, please do not reply. For any concerns, contact <a href="mailto:#appraisalMail">#appraisalMail</a></p>
+	</body>
+</html>

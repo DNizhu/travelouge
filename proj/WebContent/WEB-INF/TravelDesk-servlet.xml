@@ -1,0 +1,131 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:context="http://www.springframework.org/schema/context"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:p="http://www.springframework.org/schema/p"
+  xmlns:tx="http://www.springframework.org/schema/tx"
+ xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+ xsi:schemaLocation="
+ http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+ http://www.springframework.org/schema/jdbc
+ http://www.springframework.org/schema/jdbc/spring-jdbc-3.1.xsd
+ http://www.springframework.org/schema/tx
+ http://www.springframework.org/schema/tx/spring-tx-3.1.xsd
+ http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+ 
+ <context:component-scan base-package="com.thepsi.appraisalSystem" />
+ <context:annotation-config />
+
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+			<property name="driverClassName">
+				<value>${database.driver}</value>
+			</property>
+			<property name="url">
+				<value>${database.url}</value>
+			</property>
+			<property name="username">
+				<value>${database.user}</value>
+			</property>
+			<property name="password">
+				<value>${database.password}</value>
+			</property>
+	</bean>
+	<context:property-placeholder location="classpath:database.properties" />
+	<!-- <bean id="transactionManager" 
+          class="org.springframework.orm.hibernate3.HibernateTransactionManager"
+          p:sessionFactory-ref="sessionFactory" />
+
+    <tx:annotation-driven/> -->
+	
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="packagesToScan" value ="com.thepsi.appraisalSystem"/>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+				<prop key="hibernate.max_fetch_depth">3</prop>
+				<prop key="hibernate.jdbc.fetch_size">50</prop>
+				<prop key="hibernate.jdbc.batch_size">10</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+				
+			</props>
+		</property>
+	</bean>
+
+ <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+	 <property name="prefix">
+	   <value></value>
+	 </property>
+	 <property name="suffix">
+	    <value>.jsp</value>
+	 </property>
+ </bean>
+ 
+ <bean id="jacksonMessageConverter" class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter"></bean>
+<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
+    <property name="messageConverters">
+        <list>
+            <ref bean="jacksonMessageConverter"/>
+        </list>
+    </property>
+</bean>
+<bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>
+ <bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter"></bean>
+ 
+ 
+ <!-- Scheduler Changes -->
+ 
+ <bean name="reminderNotificationMailJob" class="org.springframework.scheduling.quartz.JobDetailBean">
+	  <property name="jobClass" value="com.thepsi.appraisalSystem.util.ReminderNotificationMailSender"/>
+	  <property name="durability" value="true" />
+ </bean>
+
+  <bean id="cronTrigger1" class="org.springframework.scheduling.quartz.CronTriggerBean">
+	  <property name="jobDetail" ref="reminderNotificationMailJob"/>
+	  <!-- <property name="cronExpression" value="0 3 14 21 * ?"/> -->
+	  <property name="cronExpression" value="0 0 10 * * ?"/>
+	  <!-- <property name="cronExpression" value="0 15 10 ? * *"/> -->
+  </bean>
+ 
+ <bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+  		<property name="jobDetails">
+            <list>
+                <ref bean="reminderNotificationMailJob" />
+            </list>
+        </property>
+  		<property name="triggers">
+   			<list>
+  				 <ref bean="cronTrigger1"/>
+   			</list>
+  		</property>
+ </bean> 
+ <!--- Changes End -->
+ 
+ <!-- scheduler Changes for Probation Emails -->
+  <bean name="probationReminderNotificationMailJob" class="org.springframework.scheduling.quartz.JobDetailBean">
+	  <property name="jobClass" value="com.thepsi.appraisalSystem.util.SchedularForProbationEmails"/>
+	  <property name="durability" value="true" />
+ </bean>
+
+  <bean id="cronTrigger2" class="org.springframework.scheduling.quartz.CronTriggerBean">
+	  <property name="jobDetail" ref="probationReminderNotificationMailJob"/>
+	  <property name="cronExpression" value="0 0 12 * * ?"/>      <!-- For every day at midnight -->
+  	  <!-- <property name="cronExpression" value="0 0/1 * 1/1 * ? *"/>-->
+  </bean>
+ 
+ <bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+  		<property name="jobDetails">
+            <list>
+                <ref bean="probationReminderNotificationMailJob" />
+            </list>
+        </property>
+  		<property name="triggers">
+   			<list>
+  				 <ref bean="cronTrigger2"/>
+   			</list>
+  		</property>
+ </bean>  
+ 
+</beans>

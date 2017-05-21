@@ -1,0 +1,11 @@
+<html>
+	<body>
+		<p>Hi #empName</p>
+
+		<p>You have successfully submitted your self- appraisal.</p>
+
+		<p>Thanks</p>
+		<p>HR Dept.</p>
+		<p>Note: This is an auto-generated mail, please do not reply. For any concerns, contact <a href="mailto:#appraisalMail">#appraisalMail</a></p>
+	</body>
+</html>

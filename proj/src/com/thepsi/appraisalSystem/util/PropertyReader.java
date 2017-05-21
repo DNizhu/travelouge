@@ -1,0 +1,363 @@
+package com.thepsi.appraisalSystem.util;
+
+import java.util.Properties;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class PropertyReader {
+	
+	public PropertyReader() {
+		readProperties();
+	}
+	
+	private String LDAP_SERVER;
+	private String LDAP_CTXFACTORY;
+	private String MSPS_LINK ;
+	private String MAIL_SMTP_HOST;
+	private String MAIL_FILE_ADDRESS;
+	private String MAIL_FROM;
+	private String APPRAISAL_SYSTEM_LINK;
+	private String UPDATE_MAIL_FILE_ADDRESS;
+	private String HR_TEAM_MAIL_ADDRESS;
+	private String SELF_APPRAISAL_COMPLETED_ADDRESS;
+	private String APPRAISAL_MAIL_ADDRESS;
+	private String MANAGER_REVIEW_ADDRESS;
+	private String MANAGER_COMPLETED_ADDRESS;
+	private String AR_COMPLETED_CONTENT;
+	private String SL_COMPLETED_CONTENT;
+	//private String AGH_COMPLETED_CONTENT;
+	//private String GH_COMPLETED_CONTENT;
+	private String HR_COMPLETED_CONTENT;
+	private String MR_TO_ADD_REVIEW_CONTENT;
+	private String REMINDER_SELF;
+	private String REMINDER_TEAM;
+	private String TARGET_SUBMIT_CONTENT;
+	private String TARGET_ACHIEVED_CONTENT;
+	private String TARGET_UNACHIEVED_CONTENT;
+	
+	// Added by vartika for probation appraisal
+	private String PROBATION_MAIL_FROM;
+	private String PROBATION_APPRAISAL_LINK;
+	private String COO_MAIL_ADDRESS;
+	private String MGMT_MAIL_ADDRESS;
+	private String PROBATION_FORM_SUBMIT_TO_NEXT_LEVEL_MAIL_CONTENT;
+	private String PROBATION_FINAL_FORM_SUBMIT_MAIL_CONTENT;
+	private String PROBATION_FORM_DELEGATION_MAIL_CONTENT;
+	private String PROBATION_REMINDER_MAIL_CONTENT;
+	private String PROBATION_REMINDER_TO_NEXT_LEVEL_MAIL_CONTENT;
+	
+	public String getPROBATION_MAIL_FROM() {
+		return PROBATION_MAIL_FROM;
+	}
+
+	public void setPROBATION_MAIL_FROM(String pROBATION_MAIL_FROM) {
+		PROBATION_MAIL_FROM = pROBATION_MAIL_FROM;
+	}
+
+	public String getPROBATION_APPRAISAL_LINK() {
+		return PROBATION_APPRAISAL_LINK;
+	}
+
+	public void setPROBATION_APPRAISAL_LINK(String pROBATION_APPRAISAL_LINK) {
+		PROBATION_APPRAISAL_LINK = pROBATION_APPRAISAL_LINK;
+	}
+    
+	public String getCOO_MAIL_ADDRESS() {
+		return COO_MAIL_ADDRESS;
+	}
+
+	public void setCOO_MAIL_ADDRESS(String cOO_MAIL_ADDRESS) {
+		COO_MAIL_ADDRESS = cOO_MAIL_ADDRESS;
+	}
+	
+
+	public String getMGMT_MAIL_ADDRESS() {
+		return MGMT_MAIL_ADDRESS;
+	}
+
+	public void setMGMT_MAIL_ADDRESS(String mGMT_MAIL_ADDRESS) {
+		MGMT_MAIL_ADDRESS = mGMT_MAIL_ADDRESS;
+	}
+
+	public String getPROBATION_FORM_SUBMIT_TO_NEXT_LEVEL_MAIL_CONTENT() {
+		return PROBATION_FORM_SUBMIT_TO_NEXT_LEVEL_MAIL_CONTENT;
+	}
+
+	public void setPROBATION_FORM_SUBMIT_TO_NEXT_LEVEL_MAIL_CONTENT(
+			String pROBATION_FORM_SUBMIT_TO_NEXT_LEVEL_MAIL_CONTENT) {
+		PROBATION_FORM_SUBMIT_TO_NEXT_LEVEL_MAIL_CONTENT = pROBATION_FORM_SUBMIT_TO_NEXT_LEVEL_MAIL_CONTENT;
+	}
+
+	public String getPROBATION_FINAL_FORM_SUBMIT_MAIL_CONTENT() {
+		return PROBATION_FINAL_FORM_SUBMIT_MAIL_CONTENT;
+	}
+
+	public void setPROBATION_FINAL_FORM_SUBMIT_MAIL_CONTENT(
+			String pROBATION_FINAL_FORM_SUBMIT_MAIL_CONTENT) {
+		PROBATION_FINAL_FORM_SUBMIT_MAIL_CONTENT = pROBATION_FINAL_FORM_SUBMIT_MAIL_CONTENT;
+	}
+
+	public void setSL_COMPLETED_CONTENT(String sL_COMPLETED_CONTENT) {
+		SL_COMPLETED_CONTENT = sL_COMPLETED_CONTENT;
+	}
+	
+	public String getPROBATION_FORM_DELEGATION_MAIL_CONTENT() {
+		return PROBATION_FORM_DELEGATION_MAIL_CONTENT;
+	}
+
+	public void setPROBATION_FORM_DELEGATION_MAIL_CONTENT(
+			String pROBATION_FORM_DELEGATION_MAIL_CONTENT) {
+		PROBATION_FORM_DELEGATION_MAIL_CONTENT = pROBATION_FORM_DELEGATION_MAIL_CONTENT;
+	}
+	
+	public String getPROBATION_REMINDER_MAIL_CONTENT() {
+		return PROBATION_REMINDER_MAIL_CONTENT;
+	}
+
+	public void setPROBATION_REMINDER_MAIL_CONTENT(
+			String pROBATION_REMINDER_MAIL_CONTENT) {
+		PROBATION_REMINDER_MAIL_CONTENT = pROBATION_REMINDER_MAIL_CONTENT;
+	}
+
+	public String getPROBATION_REMINDER_TO_NEXT_LEVEL_MAIL_CONTENT() {
+		return PROBATION_REMINDER_TO_NEXT_LEVEL_MAIL_CONTENT;
+	}
+
+	public void setPROBATION_REMINDER_TO_NEXT_LEVEL_MAIL_CONTENT(
+			String pROBATION_REMINDER_TO_NEXT_LEVEL_MAIL_CONTENT) {
+		PROBATION_REMINDER_TO_NEXT_LEVEL_MAIL_CONTENT = pROBATION_REMINDER_TO_NEXT_LEVEL_MAIL_CONTENT;
+	}
+
+	private void readProperties() {
+		Properties prop = new Properties();
+		try {
+			
+			ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+			prop.load (classLoader.getResourceAsStream(AppraisalConstants.PROPERTIES_FILENAME));	
+			
+			
+		} catch (Exception e) {
+			
+			System.out.println("Error reading the configuration file " + AppraisalConstants.PROPERTIES_FILENAME + e);
+			e.printStackTrace();
+			//logger.fatal( "Error reading the configuration file " + msPropertiesFileName, e);
+		
+			
+		}
+		
+		LDAP_SERVER = prop.getProperty(AppraisalConstants.LDAP_URL);
+		LDAP_CTXFACTORY = prop.getProperty(AppraisalConstants.LDAP_LDAPCTXFACTRY);
+		MAIL_SMTP_HOST = prop.getProperty(AppraisalConstants.MAIL_SMTP_HOST);
+		MSPS_LINK = prop.getProperty(AppraisalConstants.MSPS_LINK);
+		MAIL_FILE_ADDRESS = prop.getProperty(AppraisalConstants.MAIL_FILE_ADDRESS);
+		MAIL_FROM = prop.getProperty(AppraisalConstants.MAIL_FROM);
+		APPRAISAL_SYSTEM_LINK = prop.getProperty(AppraisalConstants.APPRAISAL_SYSTEM_LINK);
+		UPDATE_MAIL_FILE_ADDRESS = prop.getProperty(AppraisalConstants.UPDATE_MAIL_FILE_ADDRESS);
+		HR_TEAM_MAIL_ADDRESS = prop.getProperty(AppraisalConstants.HR_TEAM_MAIL_ADDRESS);
+		APPRAISAL_MAIL_ADDRESS = prop.getProperty(AppraisalConstants.APPRAISAL_MAIL_ADDRESS);
+		SELF_APPRAISAL_COMPLETED_ADDRESS = prop.getProperty(AppraisalConstants.SELF_APPRAISAL_COMPLETED_PROPERTY);
+		MANAGER_REVIEW_ADDRESS = prop.getProperty(AppraisalConstants.MANAGER_REVIEW_CONTENT_PROPERTY);
+		MANAGER_COMPLETED_ADDRESS = prop.getProperty(AppraisalConstants.MANAGER_SUBMIT_CONTENT_PROPERTY);
+		AR_COMPLETED_CONTENT = prop.getProperty(AppraisalConstants.AR_COMPLETED_CONTENT_PROPERTY);
+		SL_COMPLETED_CONTENT = prop.getProperty(AppraisalConstants.SL_COMPLETED_CONTENT_PROPERTY);
+		//AGH_COMPLETED_CONTENT = prop.getProperty(AppraisalConstants.AGH_COMPLETED_CONTENT_PROPERTY);
+		//GH_COMPLETED_CONTENT = prop.getProperty(AppraisalConstants.GH_COMPLETED_MAIL_CONTENT_PROPERTY);
+		HR_COMPLETED_CONTENT = prop.getProperty(AppraisalConstants.HR_COMPLETED_MAIL_CONTENT_PROPERTY);
+		MR_TO_ADD_REVIEW_CONTENT = prop.getProperty(AppraisalConstants.MR_TO_ADD_REVIEW_MAIL_CONTENT_PROPERTY);
+		REMINDER_SELF = prop.getProperty(AppraisalConstants.REMINDER_SELF);
+		REMINDER_TEAM = prop.getProperty(AppraisalConstants.REMINDER_TEAM);
+		TARGET_SUBMIT_CONTENT = prop.getProperty(AppraisalConstants.TARGET_SUBMIT_CONTENT_PROPERTY);
+		TARGET_ACHIEVED_CONTENT = prop.getProperty(AppraisalConstants.TARGET_ACHIEVED_CONTENT_PROPERTY);
+		TARGET_UNACHIEVED_CONTENT = prop.getProperty(AppraisalConstants.TARGET_UNACHIEVED_CONTENT_PROPERTY);
+	    PROBATION_MAIL_FROM = prop.getProperty(AppraisalConstants.PROBATION_APPRAISAL_MAIL_ADDRESS);
+	    PROBATION_APPRAISAL_LINK = prop.getProperty(AppraisalConstants.PROBATION_APPRAISAL_LINK);
+	    COO_MAIL_ADDRESS = prop.getProperty(AppraisalConstants.COO_MAIL_ADDRESS);
+	    MGMT_MAIL_ADDRESS = prop.getProperty(AppraisalConstants.MGMT_MAIL_ADDRESS);
+	    PROBATION_FORM_SUBMIT_TO_NEXT_LEVEL_MAIL_CONTENT = prop.getProperty(AppraisalConstants.PROBATION_FORM_SUBMIT_TO_NEXT_LEVEL_MAIL_CONTENT);
+	    PROBATION_FINAL_FORM_SUBMIT_MAIL_CONTENT = prop.getProperty(AppraisalConstants.PROBATION_FINAL_FORM_SUBMIT_MAIL_CONTENT);
+	    PROBATION_FORM_DELEGATION_MAIL_CONTENT = prop.getProperty(AppraisalConstants.PROBATION_FORM_DELEGATION_MAIL_CONTENT);
+	    PROBATION_REMINDER_MAIL_CONTENT = prop.getProperty(AppraisalConstants.PROBATION_REMINDER_MAIL_CONTENT);
+	    PROBATION_REMINDER_TO_NEXT_LEVEL_MAIL_CONTENT = prop.getProperty(AppraisalConstants.PROBATION_REMINDER_TO_NEXT_LEVEL_MAIL_CONTENT);
+	}
+
+	public String getLDAP_SERVER() {
+		return LDAP_SERVER;
+	}
+
+	public void setLDAP_SERVER(String lDAP_SERVER) {
+		LDAP_SERVER = lDAP_SERVER;
+	}
+
+	public String getLDAP_CTXFACTORY() {
+		return LDAP_CTXFACTORY;
+	}
+
+	public void setLDAP_CTXFACTORY(String lDAP_CTXFACTORY) {
+		LDAP_CTXFACTORY = lDAP_CTXFACTORY;
+	}
+
+	public String getMSPS_LINK() {
+		return MSPS_LINK;
+	}
+
+	public void setMSPS_LINK(String mSPS_LINK) {
+		MSPS_LINK = mSPS_LINK;
+	}
+
+	public String getMAIL_SMTP_HOST() {
+		return MAIL_SMTP_HOST;
+	}
+
+	public void setMAIL_SMTP_HOST(String mAIL_SMTP_HOST) {
+		MAIL_SMTP_HOST = mAIL_SMTP_HOST;
+	}
+	public String getMAIL_CONTENT(){
+		return MAIL_FILE_ADDRESS;
+	}
+	public String getMAIL_FROM(){
+		return MAIL_FROM;
+	}
+	public String getAPPRAISAL_SYSTEM_LINK(){
+		return APPRAISAL_SYSTEM_LINK;
+	}
+	public String getUPDATE_MAIL_CONTENT(){
+		return UPDATE_MAIL_FILE_ADDRESS;
+	}
+	public String getHR_TEAM_MAIL_ADDRESS(){
+		return HR_TEAM_MAIL_ADDRESS;
+	}
+	public String getSELF_APPRAISAL_COMPLETED_CONTENT(){
+		return SELF_APPRAISAL_COMPLETED_ADDRESS;
+	}
+	public String getAPPRAISAL_MAIL_ADDRESS(){
+		return APPRAISAL_MAIL_ADDRESS;
+	}
+	public String getMANAGER_REVIEW_CONTENT(){
+		return MANAGER_REVIEW_ADDRESS;
+	}
+	public String getMANAGER_COMPLETED_CONTENT(){
+		return MANAGER_COMPLETED_ADDRESS;
+	}
+	public String getAR_COMPLETED_CONTENT(){
+		return AR_COMPLETED_CONTENT;
+	}
+	
+	public String getSL_COMPLETED_CONTENT(){
+		return SL_COMPLETED_CONTENT;
+	}
+	public String getHR_COMPLETED_CONTENT(){
+		return HR_COMPLETED_CONTENT;
+	}
+	public String getMR_TO_ADD_REVIEW_CONTENT(){
+		return MR_TO_ADD_REVIEW_CONTENT;
+	}
+
+	public String getMAIL_FILE_ADDRESS() {
+		return MAIL_FILE_ADDRESS;
+	}
+
+	public void setMAIL_FILE_ADDRESS(String mAIL_FILE_ADDRESS) {
+		MAIL_FILE_ADDRESS = mAIL_FILE_ADDRESS;
+	}
+
+	public String getUPDATE_MAIL_FILE_ADDRESS() {
+		return UPDATE_MAIL_FILE_ADDRESS;
+	}
+
+	public void setUPDATE_MAIL_FILE_ADDRESS(String uPDATE_MAIL_FILE_ADDRESS) {
+		UPDATE_MAIL_FILE_ADDRESS = uPDATE_MAIL_FILE_ADDRESS;
+	}
+
+	public String getSELF_APPRAISAL_COMPLETED_ADDRESS() {
+		return SELF_APPRAISAL_COMPLETED_ADDRESS;
+	}
+
+	public void setSELF_APPRAISAL_COMPLETED_ADDRESS(
+			String sELF_APPRAISAL_COMPLETED_ADDRESS) {
+		SELF_APPRAISAL_COMPLETED_ADDRESS = sELF_APPRAISAL_COMPLETED_ADDRESS;
+	}
+
+	public String getMANAGER_REVIEW_ADDRESS() {
+		return MANAGER_REVIEW_ADDRESS;
+	}
+
+	public void setMANAGER_REVIEW_ADDRESS(String mANAGER_REVIEW_ADDRESS) {
+		MANAGER_REVIEW_ADDRESS = mANAGER_REVIEW_ADDRESS;
+	}
+
+	public String getMANAGER_COMPLETED_ADDRESS() {
+		return MANAGER_COMPLETED_ADDRESS;
+	}
+
+	public void setMANAGER_COMPLETED_ADDRESS(String mANAGER_COMPLETED_ADDRESS) {
+		MANAGER_COMPLETED_ADDRESS = mANAGER_COMPLETED_ADDRESS;
+	}
+
+	public String getREMINDER_SELF() {
+		return REMINDER_SELF;
+	}
+
+	public void setREMINDER_SELF(String rEMINDER_SELF) {
+		REMINDER_SELF = rEMINDER_SELF;
+	}
+
+	public void setMAIL_FROM(String mAIL_FROM) {
+		MAIL_FROM = mAIL_FROM;
+	}
+
+	public void setAPPRAISAL_SYSTEM_LINK(String aPPRAISAL_SYSTEM_LINK) {
+		APPRAISAL_SYSTEM_LINK = aPPRAISAL_SYSTEM_LINK;
+	}
+
+	public void setHR_TEAM_MAIL_ADDRESS(String hR_TEAM_MAIL_ADDRESS) {
+		HR_TEAM_MAIL_ADDRESS = hR_TEAM_MAIL_ADDRESS;
+	}
+
+	public void setAPPRAISAL_MAIL_ADDRESS(String aPPRAISAL_MAIL_ADDRESS) {
+		APPRAISAL_MAIL_ADDRESS = aPPRAISAL_MAIL_ADDRESS;
+	}
+
+	public void setAR_COMPLETED_CONTENT(String aR_COMPLETED_CONTENT) {
+		AR_COMPLETED_CONTENT = aR_COMPLETED_CONTENT;
+	}
+
+	public void setHR_COMPLETED_CONTENT(String hR_COMPLETED_CONTENT) {
+		HR_COMPLETED_CONTENT = hR_COMPLETED_CONTENT;
+	}
+
+	public void setMR_TO_ADD_REVIEW_CONTENT(String mR_TO_ADD_REVIEW_CONTENT) {
+		MR_TO_ADD_REVIEW_CONTENT = mR_TO_ADD_REVIEW_CONTENT;
+	}
+
+	public String getREMINDER_TEAM() {
+		return REMINDER_TEAM;
+	}
+
+	public void setREMINDER_TEAM(String rEMINDER_TEAM) {
+		REMINDER_TEAM = rEMINDER_TEAM;
+	}
+	public String getTARGET_SUBMIT_CONTENT(){
+		return TARGET_SUBMIT_CONTENT;
+	}
+	public String setTARGET_SUBMIT_CONTENT(String TARGET_SUBMIT_CONTENT ){
+		return TARGET_SUBMIT_CONTENT;
+	}
+
+	public String getTARGET_ACHIEVED_CONTENT() {
+		return TARGET_ACHIEVED_CONTENT;
+	}
+
+	public void setTARGET_ACHIEVED_CONTENT(String tARGET_ACHIEVED_CONTENT) {
+		TARGET_ACHIEVED_CONTENT = tARGET_ACHIEVED_CONTENT;
+	}
+
+	public String getTARGET_UNACHIEVED_CONTENT() {
+		return TARGET_UNACHIEVED_CONTENT;
+	}
+
+	public void setTARGET_UNACHIEVED_CONTENT(String tARGET_UNACHIEVED_CONTENT) {
+		TARGET_UNACHIEVED_CONTENT = tARGET_UNACHIEVED_CONTENT;
+	}
+	
+}

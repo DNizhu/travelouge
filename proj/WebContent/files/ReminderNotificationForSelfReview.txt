@@ -1,0 +1,41 @@
+<html>
+<style>
+body
+{color: #153643; 
+font-family: Arial, sans-serif; 
+font-size: 14px; 
+
+}
+.table>thead>tr>th {
+    border: 1px solid #040;
+    
+    
+}
+.table>tbody>tr>td {
+    border: 1px solid #040;
+   
+}
+.table{
+	border: 1px solid #040;
+	
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+	font-size: 14px;
+}
+</style>
+
+	<body>
+		<p>Hi #name,</p>
+
+		<p>Please be reminded to take action on #action by visiting the link - <a href="#appraisalLink">#appraisalLink</a></p>
+		<br>
+		<p>It is open till : <b>#end Date</b></p>
+		<br>
+		<p>Thanks</p>
+		<p>HR Dept.</p>
+		<p>Note: This is an auto-generated mail, please do not reply. For any concerns, contact <a href="#appraisalMail">#appraisalMail</a></p>
+		
+	</body>
+</html>	

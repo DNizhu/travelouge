@@ -1,0 +1,268 @@
+<div dir="ltr">
+	<div class="gmail_quote">
+		<div lang="EN-US">
+			<p class="MsoNormal">
+				<span lang="EN-IN" style="color:black">
+					<u></u>
+					<u></u>
+				</span>
+			</p>
+			<p class="MsoNormal">
+				<span lang="EN-IN" style="color:black">Dear #empName,
+					<u></u>
+					<u></u>
+				</span>
+			</p>
+			<div>
+				<p class="MsoNormal"></p>
+			</div>
+			<div>
+				<p class="MsoNormal">
+					<span lang="EN-IN" style="color:black"><br>Again it is the time to begin the bi-annual performance review. It is an opportunity for you to thoughtfully consider your performance level and contributions you've made in this tenure.
+						<u></u>
+						<u></u>
+					</span>
+				</p>
+			</div>
+			<div>
+				<p class="MsoNormal"></p>
+			</div>
+			<div>
+				<p class="MsoNormal">
+					<span lang="EN-IN" style="color:black">Performance evaluation is a tool that helps you move closer to your goal by knowing important aspects for your development and organizational improvement. By filling this up you can assess your progress, accomplishments, areas where you think you need further strengthening and overall performance.
+						<u></u>
+						<u></u>
+					</span>
+				</p>
+				<p class="MsoNormal"></p>
+			</div>
+			<div>
+				<p class="MsoNormal"></p>
+				<p class="MsoNormal">
+					<span lang="EN-IN"><br>Following will be the appraisal cycle :-
+						<u></u>
+						<u></u>
+					</span>
+				</p>
+				<ol start="1" type="1">
+					<li class="MsoNormal">
+						<span lang="EN-IN">Self- Appraisal
+							<u></u>
+							<u></u>
+						</span>
+					</li>
+					<li class="MsoNormal">
+						<span lang="EN-IN">Manager's Appraisal (including a personal discussion)
+							<u></u>
+							<u></u>
+						</span>
+					</li>
+					<li class="MsoNormal">
+						<span lang="EN-IN">Review of Appraisal (by Manager's Manager).&nbsp;
+							<u></u>
+							<u></u>
+						</span>
+					</li>
+				</ol>
+				<p class="MsoNormal">
+					<span lang="EN-IN">We are continuously working towards the betterment of the system and this time we have added a new feature - promotion recommendation in managers section. Managers, to please justify the recommendations with reasons.
+						<u></u>
+						<u></u>
+					</span>
+				</p>
+				
+					<p class="MsoNormal">
+						<u>
+							<b><br>Key features of this application:</b>
+						</u>
+						<br>
+						</p>
+						<p class="MsoNormal"></p>
+						<ul>
+							<li>Simple one page application  form.</li>
+							<li>All guidelines and necessary information for appraisal available on the landing page of the application.</li>
+							<li>One click access to all your time sheet data on the form itself.</li>
+							<li> Information on TELPP and IMPACT Status, on the form itself.</li>
+							<li>Appraisal notes to help you capturing anytime, every time the facts, events and accomplishments etc.</li>
+							<li> Setting the targets for recording all the tasks assigned viz a viz performance. Please note that all Managers are required to set targets for the next appraisal cycle along with relevant dates and also details of how to achieve that mentioned as remarks. The next review cycle will then review the performance against these targets.</li>
+							<li>Automated workflow from you to your manager, managers manager (i.e. Reviewer).
+								<br>
+								</li>
+								<li>Facility for managers to ask for additional reviews- to help a more complete appraisal.
+									<br>
+									</li>
+								</ul>
+								<div>
+									<u>
+										<b>Steps to fill your appraisal:</b>
+									</u>
+								</div>
+								<div>
+									<ol>
+										<li>Access the application at 
+											<a href="#appraisalLink">#appraisalLink</a> &nbsp;(Quick links - Dashboard).
+											<br>
+											</li>
+											<li>Log-in using your active directory credentials.
+												<br>
+												</li>
+												<li>Go through the guidelines to help you complete the appraisal. For your understanding, go through a sample completed self-appraisal.
+													<br>
+													</li>
+													<li>As explained above, you can access all relevant data by clicking on the button "Project Information".
+														<br>
+														</li>
+														<li>Click on Save in case your appraisal is incomplete and you would like to save the partial appraisal.
+															<br>
+															</li>
+															<li>Review thoroughly.
+																<br>
+																</li>
+																<li>Click on Submit.
+																	<br>
+																	</li>
+																	<li>For appraising your team members, click on "Project Information" and follow similar steps.
+																		<br>
+																		</li>
+																	</ol>
+																</div>
+																<p></p>
+																<p class="MsoNormal">
+																	<br>
+																	</p>
+																</div>
+																<div>
+																	<div>
+																		<p class="MsoNormal">
+																			<span lang="EN-IN" style="color:black">You have to be honest to yourselves and also give candid feedback on anything that concerns you. 
+																				<u>Remember, more the information, easier it is for managers and reviewers to give a more appropriate rating.</u>
+																			</span>
+																			<span lang="EN-IN">
+																				<u></u>
+																				<u></u>
+																			</span>
+																		</p>
+																	</div>
+																	<div>
+																		<p class="MsoNormal"></p>
+																	</div>
+																	<div>
+																		<p class="MsoNormal">
+																			<span lang="EN-IN" style="color:black"><br>In case of any confusion, help required, please contact HR immediately.&nbsp;
+																				<u></u>
+																				<u></u>
+																			</span>
+																		</p>
+																	</div>
+																	<div>
+																		<p class="MsoNormal"></p>
+																	</div>
+																	<div>
+																		<p class="MsoNormal">
+																			<span lang="EN-IN" style="color:black"><br>The April 2017 appraisal process will be completed in the following cycles: 
+																				<u></u>
+																				<u></u>
+																			</span>
+																		</p>
+																	</div>
+																	<ol start="1" type="1">
+																		<li class="MsoNormal" style="color:black">
+																			<span lang="EN-IN" style="color:rgb(31,78,121)">Self-appraisal Cycle (Open till </span>
+																			<span lang="EN-IN" style="color:rgb(31,73,125)">#selfReviewDate</span>
+																			<span lang="EN-IN" style="color:rgb(31,78,121)">): </span>
+																			<span lang="EN-IN">Where all employees can complete their self-appraisals.&nbsp;Please don't wait for the last date to submit your self-appraisal. Give your manager sufficient time to review your appraisals. If everyone submits it on last date, please understand this will be difficult for the managers to justify each appraisal.
+																				<u></u>
+																				<u></u>
+																			</span>
+																		</li>
+																		<li class="MsoNormal" style="color:black">
+																			<span lang="EN-IN" style="color:rgb(31,78,121)">Manager Appraisal Cycle (Open till #managerReviewDate): </span>
+																			<span lang="EN-IN">Where your manager will review your self-appraisal and fill his appraisal of your performance. The Manager may, if he feels the need, ask for additional reviews on your appraisal. 
+																				<u>A discussion with the appraisee is mandatory for the manager before he/she submits the appraisal</u>
+																			</span>
+																			<u>
+																				<span lang="EN-IN" style="color:rgb(31,73,125)">. </span>
+																			</u>
+																			<span lang="EN-IN" style="background-image:initial;background-color:white;background-size:initial;background-origin:initial;background-clip:initial;background-position:initial;background-repeat:initial">In the rush and bustle of daily working life, it offers a rare chance for a supervisor and subordinate to have "time out" for a one-on-one discussion of important work issues that might not otherwise be addressed.</span>
+																			<span lang="EN-IN">
+																				<u></u>
+																				<u></u>
+																			</span>
+																		</li>
+																		<li class="MsoNormal" style="color:black">
+																			<span lang="EN-IN" style="color:rgb(31,78,121)">Additional Review (Open till #additionalReviewDate): </span>
+																			<span lang="EN-IN">Wherever an additional review is requested, the concerned manager will complete and resubmit the appraisal. This flows to the Manager.</span>
+																		</li>
+																		<li class="MsoNormal" style="color:black">
+																			<span lang="EN-IN" style="color:rgb(31,78,121)">Reviewers review [Second Level Review] (Open till </span>
+																			<span lang="EN-IN" style="color:rgb(31,73,125)">#slReviewDate</span>
+																			<span lang="EN-IN" style="color:rgb(31,78,121)">): </span>
+																			<span lang="EN-IN">Evaluation on a broader perspective.&nbsp;
+																				<u></u>
+																				<u></u>
+																			</span>
+																		</li>
+																	</ol>
+																</div>
+																<div>
+																	<p class="MsoNormal">
+																		<span lang="EN-IN"><u>If there is any discrepancy in Reviewer (Managers Manager) and immediate Managers opinion, then the reviewer should ensure that changes have been done after discussion with Manager.</u></span>
+																		<span lang="EN-IN" style="font-size:12pt;font-family:&quot;times new roman&quot;,serif">
+																			<u></u>
+																			<u></u>
+																		</span>
+																	</p>																	<p class="MsoNormal">
+																		<span lang="EN-IN">We are aware that every process needs constant improvement. So we look forward to your suggestions for improvement. They may be incorporated in the next appraisal cycle.</span>
+																		<span lang="EN-IN" style="font-size:12pt;font-family:&quot;times new roman&quot;,serif">
+																			<u></u>
+																			<u></u>
+																		</span>
+																	</p>
+																</div>
+																<div>
+																	<div>
+																		<p class="MsoNormal"></p>
+																	</div>
+																	<div>
+																		<p class="MsoNormal">
+																			<span lang="EN-IN" style="color:black">For any query/clarifications, please drop an email on </span>
+																			<span lang="EN-IN">
+																				<a href="mailto:appraisal2017@thepsi.com" target="_blank">
+																					<span style="color:black">#appraisalMail</span>
+																				</a>
+																				<span style="color:black"> or contact your manager.
+																					<u></u>
+																					<u></u>
+																				</span>
+																			</span>
+																		</p>
+																	</div>
+																	<div>
+																		<p class="MsoNormal"></p>
+																	</div>
+																	<div>
+																		<p class="MsoNormal">
+																			<span lang="EN-IN" style="color:black"><br>Wishing you all the best, 
+																				<u></u>
+																				<u></u>
+																			</span>
+																		</p>
+																		<p class="MsoNormal">
+																			<span lang="EN-IN" style="color:black"><br>Happy Appraisals!
+																				<u></u>
+																				<u></u>
+																			</span>
+																		</p>
+																	</div>
+																	<div>
+																		<p class="MsoNormal"></p>
+																	</div>
+																	<div>
+																		<p class="MsoNormal">
+																			<span lang="EN-IN" style="color:black">HR Dept</span>
+																		</p>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>

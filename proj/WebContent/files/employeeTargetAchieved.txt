@@ -1,0 +1,11 @@
+<html>
+	<body>
+		<p>Hi #managerName</p>
+
+		<p>The target with the target id = #id is achieved.</p>
+		<p>Kindly visit on link - <a href=#appraisalLink>#appraisalLink</a> to view the details.</p>
+		<p>Thanks</p>
+		<p>#empName</p>
+		<p>Note: This is an auto-generated mail, please do not reply. For any concerns, contact <a href="mailto:#appraisalMail">#appraisalMail</a></p>
+	</body>
+</html>
